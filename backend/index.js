@@ -16,7 +16,14 @@ const app = express(); // Using Express.js to power our application/server
 // -------------------------------- ↓ MIDDLEWARE SETUP ↓ -----------------------------------
 
 app.use(express.json()); // uses express.js in JSON format
-app.use(cors("*")); // Enables use of CORS for frontend-backend communication
+
+const corsOptions = {
+  origin: "https://to-do-app-qsda.vercel.app", // Allow all origins - for development purposes
+  methods: ["GET", "POST", "PATCH", "PUT", "DELETE"], // Allowed HTTP methods
+  credentials: true, // Allow credentials
+};
+
+app.use(cors(corsOptions)); // Enables use of CORS for frontend-backend communication
 
 
 // ---------------------------------- ↓ DATABASE CONNECTION + APP STARTUP ↓ ---------------------------------------
