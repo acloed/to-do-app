@@ -5,7 +5,7 @@
 // const bootstrap = require("bootstrap");
 
 
-// const url = "http://localhost:3000";
+
 const url = "https://to-do-app-ogox.onrender.com"
 const taskForm = document.getElementById('taskForm');
 const toDoList = document.getElementById('toDoList');
