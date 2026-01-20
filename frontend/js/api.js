@@ -193,7 +193,7 @@ async function createNewTask() {
 
     try {
 
-        const response = await fetch(`http://localhost:3000/api/tasks/todo`, {
+        const response = await fetch(`${url}/api/tasks/todo`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
